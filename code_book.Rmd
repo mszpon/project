@@ -1,0 +1,87 @@
+---
+title: "Code Book"
+author: "MP"
+date: "18 04 2020"
+output:
+  pdf_document: default
+  word_document: default
+  html_document:
+    df_print: paged
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## run_analisys.R
+
+This R script transform raw data into tidy data according course instructions. 
+Orginal data (raw data) comes from [https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip links](https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip) 
+
+
+Tiding data process:
+
+1. Merges the training and the test sets (3 test and 3 sets files) to create one data set.
+2. Extracts only the measurements on the mean and standard deviation for each measurement.
+3. Uses descriptive activity names to name the activities in the data set Appropriately labels the data set with descriptive variable names.
+4. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
+
+
+
+## tidy_data.txt
+
+
+
+## variables 
+
+Variables name like in orginal (raw data) code book except:
+
+1. String  "()" was removed from variable name.
+2. variables startet from "t" (for example tBodyAcc-mean-X ) were change to "time" (timeBodyAcc-mean-X) 
+2. variables startet from "f" (for example fBodyAcc-mean-Y) were change to "frequency" (frequencyBodyAcc-mean-Y) 
+
+
+
+[1] "subject"                               "activity"                             
+ [3] "timeBodyAcc-mean-X"                    "timeBodyAcc-mean-Y"                   
+ [5] "timeBodyAcc-mean-Z"                    "timeBodyAcc-std-X"                    
+ [7] "timeBodyAcc-std-Y"                     "timeBodyAcc-std-Z"                    
+ [9] "timeGravityAcc-mean-X"                 "timeGravityAcc-mean-Y"                
+[11] "timeGravityAcc-mean-Z"                 "timeGravityAcc-std-X"                 
+[13] "timeGravityAcc-std-Y"                  "timeGravityAcc-std-Z"                 
+[15] "timeBodyAccJerk-mean-X"                "timeBodyAccJerk-mean-Y"               
+[17] "timeBodyAccJerk-mean-Z"                "timeBodyAccJerk-std-X"                
+[19] "timeBodyAccJerk-std-Y"                 "timeBodyAccJerk-std-Z"                
+[21] "timeBodyGyro-mean-X"                   "timeBodyGyro-mean-Y"                  
+[23] "timeBodyGyro-mean-Z"                   "timeBodyGyro-std-X"                   
+[25] "timeBodyGyro-std-Y"                    "timeBodyGyro-std-Z"                   
+[27] "timeBodyGyroJerk-mean-X"               "timeBodyGyroJerk-mean-Y"              
+[29] "timeBodyGyroJerk-mean-Z"               "timeBodyGyroJerk-std-X"               
+[31] "timeBodyGyroJerk-std-Y"                "timeBodyGyroJerk-std-Z"               
+[33] "timeBodyAccMag-mean"                   "timeBodyAccMag-std"                   
+[35] "timeGravityAccMag-mean"                "timeGravityAccMag-std"                
+[37] "timeBodyAccJerkMag-mean"               "timeBodyAccJerkMag-std"               
+[39] "timeBodyGyroMag-mean"                  "timeBodyGyroMag-std"                  
+[41] "timeBodyGyroJerkMag-mean"              "timeBodyGyroJerkMag-std"              
+[43] "frequencyBodyAcc-mean-X"               "frequencyBodyAcc-mean-Y"              
+[45] "frequencyBodyAcc-mean-Z"               "frequencyBodyAcc-std-X"               
+[47] "frequencyBodyAcc-std-Y"                "frequencyBodyAcc-std-Z"               
+[49] "frequencyBodyAcc-meanFreq-X"           "frequencyBodyAcc-meanFreq-Y"          
+[51] "frequencyBodyAcc-meanFreq-Z"           "frequencyBodyAccJerk-mean-X"          
+[53] "frequencyBodyAccJerk-mean-Y"           "frequencyBodyAccJerk-mean-Z"          
+[55] "frequencyBodyAccJerk-std-X"            "frequencyBodyAccJerk-std-Y"           
+[57] "frequencyBodyAccJerk-std-Z"            "frequencyBodyAccJerk-meanFreq-X"      
+[59] "frequencyBodyAccJerk-meanFreq-Y"       "frequencyBodyAccJerk-meanFreq-Z"      
+[61] "frequencyBodyGyro-mean-X"              "frequencyBodyGyro-mean-Y"             
+[63] "frequencyBodyGyro-mean-Z"              "frequencyBodyGyro-std-X"              
+[65] "frequencyBodyGyro-std-Y"               "frequencyBodyGyro-std-Z"              
+[67] "frequencyBodyGyro-meanFreq-X"          "frequencyBodyGyro-meanFreq-Y"         
+[69] "frequencyBodyGyro-meanFreq-Z"          "frequencyBodyAccMag-mean"             
+[71] "frequencyBodyAccMag-std"               "frequencyBodyAccMag-meanFreq"         
+[73] "frequencyBodyBodyAccJerkMag-mean"      "frequencyBodyBodyAccJerkMag-std"      
+[75] "frequencyBodyBodyAccJerkMag-meanFreq"  "frequencyBodyBodyGyroMag-mean"        
+[77] "frequencyBodyBodyGyroMag-std"          "frequencyBodyBodyGyroMag-meanFreq"    
+[79] "frequencyBodyBodyGyroJerkMag-mean"     "frequencyBodyBodyGyroJerkMag-std"     
+[81] "frequencyBodyBodyGyroJerkMag-meanFreq"
+
+
